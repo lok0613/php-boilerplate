@@ -15,7 +15,12 @@ Class Site
 	protected $viewsPath = './views/';
 
 	/**
-	 * Getter of language
+	 * @var String
+	 */
+	protected $homeRoute = 'home';
+
+	/**
+	 * Get lang from url
 	 *
 	 * @return String language
 	 */
@@ -28,6 +33,16 @@ Class Site
 	}
 
 	/**
+	 * Get view name from url
+	 *
+	 * @return String route
+	 */
+	public function getViewName()
+	{
+		return isset($_GET['v']) ? $_GET['v'] : $this->homeRoute;
+	}
+
+	/**
 	 * Helper of routing
 	 *
 	 * @param String $viewName
@@ -35,18 +50,17 @@ Class Site
 	 */
 	public function getRoute($viewName)
 	{
-		return "/index.php?v=$viewName&t={getLang()}";
+		return "/index.php?v=$viewName&t={$this->getLang()}";
 	}
 
 	/**
 	 * Helper of rendering
 	 *
-	 * @param String $viewNAme
 	 * @return null
 	 */
-	public function render($viewName)
+	public function render()
 	{
-		$viewFile = $this->viewsPath . $viewName . '.php';
+		$viewFile = $this->viewsPath . $this->getViewName() . '.php';
 		if (!file_exists($viewFile)) {
 			require_once($this->viewsPath . '404.php');
 		} else {
@@ -63,6 +77,7 @@ Class Site
 	{
 		return require('./translations/' . $this->getLang() . '.php');
 	}
+
 }
 
 $site = new Site();

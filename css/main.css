@@ -1,0 +1,97 @@
+footer {
+	background-color: #fafafa;
+	color: #222;
+}
+
+footer ul {
+	margin: 1em;
+}
+
+footer ul > li {
+	list-style: none;
+	float: left;
+    font-size: 10px;
+    margin: 0 4px;
+}
+
+footer ul > li > a {
+	text-decoration: none;
+	color: #222;
+}
+
+footer ul > li > a:hover {
+	color: #3b5998;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/* override bootstrap */
+
+@media (min-width: 768px) {
+	.navbar.navbar-default .nav.navbar-nav >  li > a {
+		border-top: solid 3px #dbdbdb;
+	}
+
+	.navbar.navbar-default .nav.navbar-nav > li > a:hover {
+		border-top: solid 3px #ebb21f;
+	}
+
+	.navbar.navbar-default .nav.navbar-nav >  li > a {
+		padding: 10px 7px;
+	}
+}
+
+.navbar.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar.navbar-default > .container-fluid,
+.navbar.navbar-default > .container-fluid > .collapse.navbar-collapse {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar.navbar-default .nav.navbar-nav > li {
+	margin-left: 3px;
+}
+
+.navbar.navbar-default .nav.navbar-nav >  li > a {
+	font-size: 14px;
+	padding: 10px 15px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+}
+
+.dropdown-menu > li {
+	background-color: transparent;
+	color: #222;
+	padding: 0;
+	margin: 0;
+}
+
+.dropdown-menu > li > a {
+	padding: 5px 0 5px 15px;
+}
+
+.dropdown-menu > li:hover > a {
+	background-color: orange;
+	color: #fff;
+}
+
+ul.dropdown-menu {
+	padding: 0;
+	box-shadow: none;
+	width: 150px;
+}
+
+footer > .container {
+	padding: 0;
+}
+
+p {
+	margin: 1em 0;
+}

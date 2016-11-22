@@ -6,6 +6,6 @@ $lang = $site->getTranslation();
 
 require_once('./partials/header.php');
 
-$site->render($_GET['v']);
+$site->render();
 
 require_once('./partials/footer.php');
