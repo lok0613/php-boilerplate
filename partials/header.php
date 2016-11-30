@@ -38,5 +38,10 @@
 					</div>
 				</div>
 			</nav>
+
+			<div id="langs">
+				<a href="<?= $site->getRoute(null, 'en')?>">English</a>
+				<a href="<?= $site->getRoute(null, 'zh')?>">中文</a>
+			</div>
 		</div>
 	</div>

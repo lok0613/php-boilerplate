@@ -45,12 +45,15 @@ Class Site
 	/**
 	 * Helper of routing
 	 *
-	 * @param String $viewName
+	 * @param String|Null $viewName
+	 * @param String|Null $lang
 	 * @return String path
 	 */
-	public function getRoute($viewName)
+	public function getRoute($viewName = null, $lang = null)
 	{
-		return "/index.php?v=$viewName&t={$this->getLang()}";
+		$viewName = isset($viewName) ? $viewName : $this->getViewName();
+		$lang = isset($lang) ? $lang : $this->getLang();
+		return "/index.php?v=$viewName&t=$lang";
 	}
 
 	/**
