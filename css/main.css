@@ -95,3 +95,26 @@ footer > .container {
 p {
 	margin: 1em 0;
 }
+
+.container.fix-navbar > a > img {
+	margin-bottom: 70px;
+}
+
+.container.fix-navbar .navbar.navbar-default {
+	position: fixed;
+	top: 0;
+}
+
+@media (max-width: 768px) {
+	.container.fix-navbar .navbar.navbar-default {
+		padding-right: 30px;
+	    padding-left: 30px;
+	    margin-right: auto;
+	    margin-left: auto;
+	    width: 100%;
+		left: 0;
+	}
+	.container.fix-navbar .navbar.navbar-default .navbar-collapse.collapse.in {
+		background-color: #fff;
+	}
+}

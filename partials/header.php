@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title><?php echo $lang['title']?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -10,7 +11,7 @@
 	<div class="container-fluid">
 		<div class="container">
 			<a href="<?= $site->getRoute('home')?>">
-				<img src="http://www.hkccfl.org.hk/beta_v1/images/hkccfl_logo-1.png" alt="logo" class="img-responsive"/>
+				<img src="http://www.hkccfl.org.hk/images/hkccfl_logo-1.png" alt="logo" class="img-responsive"/>
 			</a>
 
 			<nav class="navbar navbar-default">
@@ -39,7 +40,7 @@
 				</div>
 			</nav>
 
-			<div id="langs">
+			<div id="langs" style="display: none">
 				<a href="<?= $site->getRoute(null, 'en')?>">English</a>
 				<a href="<?= $site->getRoute(null, 'zh')?>">中文</a>
 			</div>
